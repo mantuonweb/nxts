@@ -276,7 +276,7 @@
           "build:all": {
             "executor": "nx:run-commands",
             "outputs": [
-              "dist/mantu/shared"
+              "{workspaceRoot}/dist/mantu/shared"
             ],
             "options": {
               "commands": [
@@ -24686,5 +24686,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1764673037572
+  "computedAt": 1764673324735
 }

@@ -36,7 +36,7 @@
     },
     "build:all": {
       "executor": "nx:run-commands",
-      "outputs": ["dist/mantu/shared"],
+      "outputs": ["{workspaceRoot}/dist/mantu/shared"],
       "options": {
         "commands": [
           "nx run shared:build:cjs",

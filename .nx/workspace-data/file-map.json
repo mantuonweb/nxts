@@ -43,6 +43,115 @@
   ],
   "fileMap": {
     "projectFileMap": {
+      "@mantu/api-e2e": [
+        {
+          "file": "api-e2e/.spec.swcrc",
+          "hash": "18201067170784284381"
+        },
+        {
+          "file": "api-e2e/eslint.config.mjs",
+          "hash": "9036454466467975933"
+        },
+        {
+          "file": "api-e2e/jest.config.cts",
+          "hash": "1689764721356202056"
+        },
+        {
+          "file": "api-e2e/package.json",
+          "hash": "17957513584539842875"
+        },
+        {
+          "file": "api-e2e/src/api/api.spec.ts",
+          "hash": "110394728024017389",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "api-e2e/src/support/global-setup.ts",
+          "hash": "10817858795115919263",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "api-e2e/src/support/global-teardown.ts",
+          "hash": "14210317125869451873",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "api-e2e/tsconfig.json",
+          "hash": "12811719995859492777"
+        }
+      ],
+      "shared": [
+        {
+          "file": "shared/.spec.swcrc",
+          "hash": "18201067170784284381"
+        },
+        {
+          "file": "shared/README.md",
+          "hash": "4013336366747760891"
+        },
+        {
+          "file": "shared/eslint.config.mjs",
+          "hash": "10723019122502859391",
+          "deps": [
+            [
+              "npm:jsonc-eslint-parser",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "shared/jest.config.cts",
+          "hash": "6457390774091241719"
+        },
+        {
+          "file": "shared/package.json",
+          "hash": "2291732737579530754",
+          "deps": [
+            "npm:tslib"
+          ]
+        },
+        {
+          "file": "shared/project.json",
+          "hash": "6673110643276142853"
+        },
+        {
+          "file": "shared/src/index.ts",
+          "hash": "3911698710317675530"
+        },
+        {
+          "file": "shared/src/lib/shared.spec.ts",
+          "hash": "8228932294032745471"
+        },
+        {
+          "file": "shared/src/lib/shared.ts",
+          "hash": "3815621113879200261"
+        },
+        {
+          "file": "shared/tsconfig.json",
+          "hash": "353779845009761822"
+        },
+        {
+          "file": "shared/tsconfig.lib.json",
+          "hash": "3052515121813003930"
+        },
+        {
+          "file": "shared/tsconfig.spec.json",
+          "hash": "5216594310804250869"
+        }
+      ],
       "@mantu/api": [
         {
           "file": "api/.spec.swcrc",
@@ -135,121 +244,12 @@
             "npm:@nx/webpack"
           ]
         }
-      ],
-      "@mantu/api-e2e": [
-        {
-          "file": "api-e2e/.spec.swcrc",
-          "hash": "18201067170784284381"
-        },
-        {
-          "file": "api-e2e/eslint.config.mjs",
-          "hash": "9036454466467975933"
-        },
-        {
-          "file": "api-e2e/jest.config.cts",
-          "hash": "1689764721356202056"
-        },
-        {
-          "file": "api-e2e/package.json",
-          "hash": "17957513584539842875"
-        },
-        {
-          "file": "api-e2e/src/api/api.spec.ts",
-          "hash": "110394728024017389",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "api-e2e/src/support/global-setup.ts",
-          "hash": "10817858795115919263",
-          "deps": [
-            "npm:@nx/node"
-          ]
-        },
-        {
-          "file": "api-e2e/src/support/global-teardown.ts",
-          "hash": "14210317125869451873",
-          "deps": [
-            "npm:@nx/node"
-          ]
-        },
-        {
-          "file": "api-e2e/src/support/test-setup.ts",
-          "hash": "15521797170623961900",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "api-e2e/tsconfig.json",
-          "hash": "12811719995859492777"
-        }
-      ],
-      "shared": [
-        {
-          "file": "shared/.spec.swcrc",
-          "hash": "18201067170784284381"
-        },
-        {
-          "file": "shared/README.md",
-          "hash": "4013336366747760891"
-        },
-        {
-          "file": "shared/eslint.config.mjs",
-          "hash": "10723019122502859391",
-          "deps": [
-            [
-              "npm:jsonc-eslint-parser",
-              "dynamic"
-            ]
-          ]
-        },
-        {
-          "file": "shared/jest.config.cts",
-          "hash": "6457390774091241719"
-        },
-        {
-          "file": "shared/package.json",
-          "hash": "2291732737579530754",
-          "deps": [
-            "npm:tslib"
-          ]
-        },
-        {
-          "file": "shared/project.json",
-          "hash": "320929903107479710"
-        },
-        {
-          "file": "shared/src/index.ts",
-          "hash": "3911698710317675530"
-        },
-        {
-          "file": "shared/src/lib/shared.spec.ts",
-          "hash": "8228932294032745471"
-        },
-        {
-          "file": "shared/src/lib/shared.ts",
-          "hash": "3815621113879200261"
-        },
-        {
-          "file": "shared/tsconfig.json",
-          "hash": "353779845009761822"
-        },
-        {
-          "file": "shared/tsconfig.lib.json",
-          "hash": "3052515121813003930"
-        },
-        {
-          "file": "shared/tsconfig.spec.json",
-          "hash": "5216594310804250869"
-        }
       ]
     },
     "nonProjectFiles": [
       {
         "file": ".gitignore",
-        "hash": "405971170634193956"
+        "hash": "4214781772152035055"
       },
       {
         "file": "README.md",
