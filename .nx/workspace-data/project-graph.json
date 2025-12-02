@@ -4,20 +4,20 @@
       "name": "@mantu/api-e2e",
       "type": "app",
       "data": {
-        "root": "mantu/api-e2e",
+        "root": "api-e2e",
         "targets": {
           "typecheck": {
             "dependsOn": [
               "^typecheck"
             ],
             "options": {
-              "cwd": "mantu/api-e2e",
+              "cwd": "api-e2e",
               "command": "tsc --build --emitDeclarationOnly"
             },
             "cache": true,
             "inputs": [
               "{projectRoot}/package.json",
-              "{workspaceRoot}/mantu/tsconfig.base.json",
+              "{workspaceRoot}/tsconfig.base.json",
               "{projectRoot}/tsconfig.json",
               "{projectRoot}/jest.config.ts",
               "{projectRoot}/src/**/*.ts",
@@ -52,14 +52,14 @@
           "lint": {
             "cache": true,
             "options": {
-              "cwd": "mantu/api-e2e",
+              "cwd": "api-e2e",
               "command": "eslint ."
             },
             "inputs": [
               "default",
               "^default",
               "{workspaceRoot}/eslint.config.mjs",
-              "{workspaceRoot}/mantu/api-e2e/eslint.config.mjs",
+              "{workspaceRoot}/api-e2e/eslint.config.mjs",
               "{workspaceRoot}/tools/eslint-rules/**/*",
               {
                 "externalDependencies": [
@@ -85,274 +85,41 @@
               }
             },
             "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "e2e": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{projectRoot}/test-output/jest/coverage"
+            ],
+            "options": {
+              "jestConfig": "api-e2e/jest.config.cts",
+              "passWithNoTests": true
+            },
+            "dependsOn": [
+              "@mantu/api:build",
+              "@mantu/api:serve"
+            ],
             "configurations": {},
             "parallelism": true
           }
         },
         "name": "@mantu/api-e2e",
-        "implicitDependencies": [],
-        "tags": []
-      }
-    },
-    "@mantu/api": {
-      "name": "@mantu/api",
-      "type": "app",
-      "data": {
-        "root": "mantu/api",
-        "targets": {
-          "typecheck": {
-            "dependsOn": [
-              "^typecheck"
-            ],
-            "options": {
-              "cwd": "mantu/api",
-              "command": "tsc --build --emitDeclarationOnly"
-            },
-            "cache": true,
-            "inputs": [
-              "{projectRoot}/package.json",
-              "{workspaceRoot}/mantu/tsconfig.base.json",
-              "{projectRoot}/tsconfig.json",
-              "{projectRoot}/tsconfig.app.json",
-              "{projectRoot}/tsconfig.spec.json",
-              "{projectRoot}/src/**/*.ts",
-              "{projectRoot}/jest.config.ts",
-              "{projectRoot}/jest.config.cts",
-              "{projectRoot}/src/**/*.test.ts",
-              "{projectRoot}/src/**/*.spec.ts",
-              "{projectRoot}/src/**/*.d.ts",
-              "!{projectRoot}/out-tsc",
-              "!{projectRoot}/dist",
-              "!{projectRoot}/eslint.config.js",
-              "!{projectRoot}/eslint.config.cjs",
-              "!{projectRoot}/eslint.config.mjs",
-              "^production"
-            ],
-            "outputs": [
-              "{projectRoot}/dist/**/*.d.ts",
-              "{projectRoot}/dist/**/*.d.ts.map",
-              "{projectRoot}/dist/tsconfig.app.tsbuildinfo",
-              "{projectRoot}/out-tsc/jest/**/*.d.ts",
-              "{projectRoot}/out-tsc/jest/**/*.d.ts.map",
-              "{projectRoot}/out-tsc/jest/tsconfig.tsbuildinfo"
-            ],
-            "syncGenerators": [
-              "@nx/js:typescript-sync"
-            ],
-            "metadata": {
-              "technologies": [
-                "typescript"
-              ],
-              "description": "Runs type-checking for the project.",
-              "help": {
-                "command": "npx tsc --build --help",
-                "example": {
-                  "args": [
-                    "--force"
-                  ]
-                }
-              }
-            },
-            "executor": "nx:run-commands",
-            "configurations": {},
-            "parallelism": true
-          },
-          "build": {
-            "options": {
-              "cwd": "mantu/api",
-              "args": [
-                "--node-env=production"
-              ],
-              "command": "webpack-cli build"
-            },
-            "cache": true,
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production",
-              {
-                "externalDependencies": [
-                  "webpack-cli"
-                ]
-              }
-            ],
-            "outputs": [
-              "{workspaceRoot}/mantu/api/dist"
-            ],
-            "metadata": {
-              "technologies": [
-                "webpack"
-              ],
-              "description": "Runs Webpack build",
-              "help": {
-                "command": "npx webpack-cli build --help",
-                "example": {
-                  "options": {
-                    "json": "stats.json"
-                  },
-                  "args": [
-                    "--profile"
-                  ]
-                }
-              }
-            },
-            "syncGenerators": [
-              "@nx/js:typescript-sync"
-            ],
-            "executor": "nx:run-commands",
-            "configurations": {},
-            "parallelism": true
-          },
-          "serve": {
-            "continuous": true,
-            "options": {
-              "cwd": "mantu/api",
-              "args": [
-                "--node-env=development"
-              ],
-              "command": "webpack-cli serve"
-            },
-            "metadata": {
-              "technologies": [
-                "webpack"
-              ],
-              "description": "Starts Webpack dev server",
-              "help": {
-                "command": "npx webpack-cli serve --help",
-                "example": {
-                  "options": {
-                    "args": [
-                      "--client-progress",
-                      "--history-api-fallback "
-                    ]
-                  }
-                }
-              }
-            },
-            "syncGenerators": [
-              "@nx/js:typescript-sync"
-            ],
-            "executor": "nx:run-commands",
-            "configurations": {},
-            "parallelism": true
-          },
-          "preview": {
-            "continuous": true,
-            "options": {
-              "cwd": "mantu/api",
-              "args": [
-                "--node-env=production"
-              ],
-              "command": "webpack-cli serve"
-            },
-            "metadata": {
-              "technologies": [
-                "webpack"
-              ],
-              "description": "Starts Webpack dev server in production mode",
-              "help": {
-                "command": "npx webpack-cli serve --help",
-                "example": {
-                  "options": {
-                    "args": [
-                      "--client-progress",
-                      "--history-api-fallback "
-                    ]
-                  }
-                }
-              }
-            },
-            "syncGenerators": [
-              "@nx/js:typescript-sync"
-            ],
-            "executor": "nx:run-commands",
-            "configurations": {},
-            "parallelism": true
-          },
-          "serve-static": {
-            "continuous": true,
-            "dependsOn": [
-              "build"
-            ],
-            "executor": "@nx/web:file-server",
-            "options": {
-              "buildTarget": "build",
-              "spa": true
-            },
-            "syncGenerators": [
-              "@nx/js:typescript-sync"
-            ],
-            "configurations": {},
-            "parallelism": true
-          },
-          "build-deps": {
-            "dependsOn": [
-              "^build"
-            ],
-            "configurations": {},
-            "options": {},
-            "parallelism": true,
-            "executor": "nx:noop"
-          },
-          "watch-deps": {
-            "continuous": true,
-            "dependsOn": [
-              "build-deps"
-            ],
-            "executor": "nx:run-commands",
-            "options": {
-              "command": "npx nx watch --projects @mantu/api --includeDependentProjects -- npx nx build-deps @mantu/api"
-            },
-            "configurations": {},
-            "parallelism": true
-          },
-          "lint": {
-            "cache": true,
-            "options": {
-              "cwd": "mantu/api",
-              "command": "eslint ."
-            },
-            "inputs": [
-              "default",
-              "^default",
-              "{workspaceRoot}/eslint.config.mjs",
-              "{workspaceRoot}/mantu/api/eslint.config.mjs",
-              "{workspaceRoot}/tools/eslint-rules/**/*",
-              {
-                "externalDependencies": [
-                  "eslint"
-                ]
-              }
-            ],
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "metadata": {
-              "technologies": [
-                "eslint"
-              ],
-              "description": "Runs ESLint on project",
-              "help": {
-                "command": "npx eslint --help",
-                "example": {
-                  "options": {
-                    "max-warnings": 0
-                  }
-                }
-              }
-            },
-            "executor": "nx:run-commands",
-            "configurations": {},
-            "parallelism": true
+        "tags": [
+          "npm:private"
+        ],
+        "implicitDependencies": [
+          "@mantu/api"
+        ],
+        "metadata": {
+          "targetGroups": {},
+          "js": {
+            "packageName": "@mantu/api-e2e",
+            "packageVersion": "0.0.1",
+            "isInPackageManagerWorkspaces": true
           }
-        },
-        "projectType": "application",
-        "metadata": {},
-        "name": "@mantu/api",
-        "implicitDependencies": [],
-        "tags": []
+        }
       }
     },
     "shared": {
@@ -550,28 +317,48 @@
         "implicitDependencies": []
       }
     },
-    "@mantu/source": {
-      "name": "@mantu/source",
+    "@mantu/api": {
+      "name": "@mantu/api",
       "type": "app",
       "data": {
-        "root": "mantu",
+        "root": "api",
         "targets": {
           "typecheck": {
             "dependsOn": [
               "^typecheck"
             ],
             "options": {
-              "cwd": "mantu",
+              "cwd": "api",
               "command": "tsc --build --emitDeclarationOnly"
             },
             "cache": true,
             "inputs": [
-              "production",
-              {
-                "dependentTasksOutputFiles": "**/*.d.ts"
-              }
+              "{projectRoot}/package.json",
+              "{workspaceRoot}/tsconfig.base.json",
+              "{projectRoot}/tsconfig.json",
+              "{projectRoot}/tsconfig.app.json",
+              "{projectRoot}/tsconfig.spec.json",
+              "{projectRoot}/src/**/*.ts",
+              "{projectRoot}/jest.config.ts",
+              "{projectRoot}/jest.config.cts",
+              "{projectRoot}/src/**/*.test.ts",
+              "{projectRoot}/src/**/*.spec.ts",
+              "{projectRoot}/src/**/*.d.ts",
+              "!{projectRoot}/out-tsc",
+              "!{projectRoot}/dist",
+              "!{projectRoot}/eslint.config.js",
+              "!{projectRoot}/eslint.config.cjs",
+              "!{projectRoot}/eslint.config.mjs",
+              "^production"
             ],
-            "outputs": [],
+            "outputs": [
+              "{projectRoot}/dist/**/*.d.ts",
+              "{projectRoot}/dist/**/*.d.ts.map",
+              "{projectRoot}/dist/tsconfig.app.tsbuildinfo",
+              "{projectRoot}/out-tsc/jest/**/*.d.ts",
+              "{projectRoot}/out-tsc/jest/**/*.d.ts.map",
+              "{projectRoot}/out-tsc/jest/tsconfig.tsbuildinfo"
+            ],
             "syncGenerators": [
               "@nx/js:typescript-sync"
             ],
@@ -593,17 +380,162 @@
             "configurations": {},
             "parallelism": true
           },
+          "build": {
+            "cache": true,
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production",
+              {
+                "externalDependencies": [
+                  "webpack-cli"
+                ]
+              }
+            ],
+            "outputs": [
+              "{workspaceRoot}/api/dist"
+            ],
+            "metadata": {
+              "technologies": [
+                "webpack"
+              ],
+              "description": "Runs Webpack build",
+              "help": {
+                "command": "npx webpack-cli build --help",
+                "example": {
+                  "options": {
+                    "json": "stats.json"
+                  },
+                  "args": [
+                    "--profile"
+                  ]
+                }
+              }
+            },
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "cwd": "api",
+              "args": [
+                "--node-env=production"
+              ],
+              "command": "webpack-cli build"
+            },
+            "configurations": {
+              "development": {
+                "args": [
+                  "--node-env=development"
+                ]
+              }
+            },
+            "parallelism": true
+          },
+          "serve": {
+            "continuous": true,
+            "executor": "@nx/js:node",
+            "defaultConfiguration": "development",
+            "dependsOn": [
+              "build"
+            ],
+            "options": {
+              "buildTarget": "@mantu/api:build",
+              "runBuildTargetDependencies": false
+            },
+            "configurations": {
+              "development": {
+                "buildTarget": "@mantu/api:build:development"
+              },
+              "production": {
+                "buildTarget": "@mantu/api:build:production"
+              }
+            },
+            "parallelism": true
+          },
+          "preview": {
+            "continuous": true,
+            "options": {
+              "cwd": "api",
+              "args": [
+                "--node-env=production"
+              ],
+              "command": "webpack-cli serve"
+            },
+            "metadata": {
+              "technologies": [
+                "webpack"
+              ],
+              "description": "Starts Webpack dev server in production mode",
+              "help": {
+                "command": "npx webpack-cli serve --help",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--client-progress",
+                      "--history-api-fallback "
+                    ]
+                  }
+                }
+              }
+            },
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "serve-static": {
+            "continuous": true,
+            "dependsOn": [
+              "build"
+            ],
+            "executor": "@nx/web:file-server",
+            "options": {
+              "buildTarget": "build",
+              "spa": true
+            },
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "configurations": {},
+            "parallelism": true
+          },
+          "build-deps": {
+            "dependsOn": [
+              "^build"
+            ],
+            "configurations": {},
+            "options": {},
+            "parallelism": true,
+            "executor": "nx:noop"
+          },
+          "watch-deps": {
+            "continuous": true,
+            "dependsOn": [
+              "build-deps"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "npx nx watch --projects @mantu/api --includeDependentProjects -- npx nx build-deps @mantu/api"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
           "lint": {
             "cache": true,
             "options": {
-              "cwd": "mantu",
+              "cwd": "api",
               "command": "eslint ."
             },
             "inputs": [
               "default",
               "^default",
               "{workspaceRoot}/eslint.config.mjs",
-              "{workspaceRoot}/mantu/eslint.config.mjs",
+              "{workspaceRoot}/api/eslint.config.mjs",
               "{workspaceRoot}/tools/eslint-rules/**/*",
               {
                 "externalDependencies": [
@@ -631,11 +563,107 @@
             "executor": "nx:run-commands",
             "configurations": {},
             "parallelism": true
+          },
+          "test": {
+            "metadata": {
+              "technologies": [
+                "jest"
+              ],
+              "description": "Run Jest Tests",
+              "help": {
+                "command": "npx jest --help",
+                "example": {
+                  "options": {
+                    "coverage": true
+                  }
+                }
+              }
+            },
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js",
+              {
+                "externalDependencies": [
+                  "jest"
+                ]
+              }
+            ],
+            "outputs": [
+              "{projectRoot}/test-output/jest/coverage"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "cwd": "api",
+              "env": {
+                "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\",\"module\":\"commonjs\",\"customConditions\":null}"
+              },
+              "command": "jest",
+              "passWithNoTests": true
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          },
+          "prune-lockfile": {
+            "dependsOn": [
+              "build"
+            ],
+            "cache": true,
+            "executor": "@nx/js:prune-lockfile",
+            "outputs": [
+              "{workspaceRoot}/api/dist/package.json",
+              "{workspaceRoot}/api/dist/package-lock.json"
+            ],
+            "options": {
+              "buildTarget": "build"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "copy-workspace-modules": {
+            "dependsOn": [
+              "build"
+            ],
+            "cache": true,
+            "outputs": [
+              "{workspaceRoot}/api/dist/workspace_modules"
+            ],
+            "executor": "@nx/js:copy-workspace-modules",
+            "options": {
+              "buildTarget": "build"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "prune": {
+            "dependsOn": [
+              "prune-lockfile",
+              "copy-workspace-modules"
+            ],
+            "executor": "nx:noop",
+            "configurations": {},
+            "options": {},
+            "parallelism": true
           }
         },
-        "name": "@mantu/source",
-        "implicitDependencies": [],
-        "tags": []
+        "projectType": "application",
+        "metadata": {
+          "targetGroups": {},
+          "js": {
+            "packageName": "@mantu/api",
+            "packageVersion": "0.0.1",
+            "isInPackageManagerWorkspaces": true
+          }
+        },
+        "name": "@mantu/api",
+        "tags": [
+          "npm:private"
+        ],
+        "implicitDependencies": []
       }
     }
   },
@@ -10833,6 +10861,11 @@
     "@mantu/api-e2e": [
       {
         "source": "@mantu/api-e2e",
+        "target": "@mantu/api",
+        "type": "implicit"
+      },
+      {
+        "source": "@mantu/api-e2e",
         "target": "npm:axios",
         "type": "static"
       },
@@ -10840,10 +10873,17 @@
         "source": "@mantu/api-e2e",
         "target": "npm:@nx/node",
         "type": "static"
+      }
+    ],
+    "shared": [
+      {
+        "source": "shared",
+        "target": "npm:jsonc-eslint-parser",
+        "type": "dynamic"
       },
       {
-        "source": "@mantu/api-e2e",
-        "target": "@mantu/source",
+        "source": "shared",
+        "target": "npm:tslib",
         "type": "static"
       }
     ],
@@ -10865,16 +10905,6 @@
       },
       {
         "source": "@mantu/api",
-        "target": "npm:@nx/webpack",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/api",
-        "target": "@mantu/source",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/api",
         "target": "npm:@nestjs/platform-express",
         "type": "static"
       },
@@ -10892,209 +10922,10 @@
         "source": "@mantu/api",
         "target": "npm:tslib",
         "type": "static"
-      }
-    ],
-    "shared": [
-      {
-        "source": "shared",
-        "target": "@mantu/source",
-        "type": "static"
       },
       {
-        "source": "shared",
-        "target": "npm:jsonc-eslint-parser",
-        "type": "dynamic"
-      },
-      {
-        "source": "shared",
-        "target": "npm:tslib",
-        "type": "static"
-      }
-    ],
-    "@mantu/source": [
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nx/eslint-plugin",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:jest",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nx/jest",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@eslint/js",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nestjs/schematics",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nestjs/testing",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nx/eslint",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nx/js",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nx/nest",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nx/node",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nx/web",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
+        "source": "@mantu/api",
         "target": "npm:@nx/webpack",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@swc-node/register",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@swc/core",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@swc/helpers",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@swc/jest",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@types/jest",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@types/node",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:eslint",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:eslint-config-prettier",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:jest-environment-node",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:jest-util",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:jsonc-eslint-parser",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:nx",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:prettier",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:ts-jest",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:ts-node",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:tslib",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:typescript",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:typescript-eslint",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:webpack-cli",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nestjs/common",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nestjs/core",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:@nestjs/platform-express",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:axios",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:reflect-metadata",
-        "type": "static"
-      },
-      {
-        "source": "@mantu/source",
-        "target": "npm:rxjs",
         "type": "static"
       }
     ],
@@ -24854,631 +24685,6 @@
     ]
   },
   "version": "6.0",
-  "errors": [
-    {
-      "conflicts": {},
-      "projects": {
-        "@mantu/api": {
-          "root": "mantu/api",
-          "targets": {
-            "typecheck": {
-              "dependsOn": [
-                "^typecheck"
-              ],
-              "options": {
-                "cwd": "mantu/api",
-                "command": "tsc --build --emitDeclarationOnly"
-              },
-              "cache": true,
-              "inputs": [
-                "{projectRoot}/package.json",
-                "{workspaceRoot}/mantu/tsconfig.base.json",
-                "{projectRoot}/tsconfig.json",
-                "{projectRoot}/tsconfig.app.json",
-                "{projectRoot}/tsconfig.spec.json",
-                "{projectRoot}/src/**/*.ts",
-                "{projectRoot}/jest.config.ts",
-                "{projectRoot}/jest.config.cts",
-                "{projectRoot}/src/**/*.test.ts",
-                "{projectRoot}/src/**/*.spec.ts",
-                "{projectRoot}/src/**/*.d.ts",
-                "!{projectRoot}/out-tsc",
-                "!{projectRoot}/dist",
-                "!{projectRoot}/eslint.config.js",
-                "!{projectRoot}/eslint.config.cjs",
-                "!{projectRoot}/eslint.config.mjs",
-                "^production"
-              ],
-              "outputs": [
-                "{projectRoot}/dist/**/*.d.ts",
-                "{projectRoot}/dist/**/*.d.ts.map",
-                "{projectRoot}/dist/tsconfig.app.tsbuildinfo",
-                "{projectRoot}/out-tsc/jest/**/*.d.ts",
-                "{projectRoot}/out-tsc/jest/**/*.d.ts.map",
-                "{projectRoot}/out-tsc/jest/tsconfig.tsbuildinfo"
-              ],
-              "syncGenerators": [
-                "@nx/js:typescript-sync"
-              ],
-              "metadata": {
-                "technologies": [
-                  "typescript"
-                ],
-                "description": "Runs type-checking for the project.",
-                "help": {
-                  "command": "npx tsc --build --help",
-                  "example": {
-                    "args": [
-                      "--force"
-                    ]
-                  }
-                }
-              },
-              "executor": "nx:run-commands",
-              "configurations": {},
-              "parallelism": true
-            },
-            "build": {
-              "options": {
-                "cwd": "mantu/api",
-                "args": [
-                  "--node-env=production"
-                ],
-                "command": "webpack-cli build"
-              },
-              "cache": true,
-              "dependsOn": [
-                "^build"
-              ],
-              "inputs": [
-                "production",
-                "^production",
-                {
-                  "externalDependencies": [
-                    "webpack-cli"
-                  ]
-                }
-              ],
-              "outputs": [
-                "{workspaceRoot}/mantu/api/dist"
-              ],
-              "metadata": {
-                "technologies": [
-                  "webpack"
-                ],
-                "description": "Runs Webpack build",
-                "help": {
-                  "command": "npx webpack-cli build --help",
-                  "example": {
-                    "options": {
-                      "json": "stats.json"
-                    },
-                    "args": [
-                      "--profile"
-                    ]
-                  }
-                }
-              },
-              "syncGenerators": [
-                "@nx/js:typescript-sync"
-              ],
-              "executor": "nx:run-commands",
-              "configurations": {},
-              "parallelism": true
-            },
-            "serve": {
-              "continuous": true,
-              "options": {
-                "cwd": "mantu/api",
-                "args": [
-                  "--node-env=development"
-                ],
-                "command": "webpack-cli serve"
-              },
-              "metadata": {
-                "technologies": [
-                  "webpack"
-                ],
-                "description": "Starts Webpack dev server",
-                "help": {
-                  "command": "npx webpack-cli serve --help",
-                  "example": {
-                    "options": {
-                      "args": [
-                        "--client-progress",
-                        "--history-api-fallback "
-                      ]
-                    }
-                  }
-                }
-              },
-              "syncGenerators": [
-                "@nx/js:typescript-sync"
-              ],
-              "executor": "nx:run-commands",
-              "configurations": {},
-              "parallelism": true
-            },
-            "preview": {
-              "continuous": true,
-              "options": {
-                "cwd": "mantu/api",
-                "args": [
-                  "--node-env=production"
-                ],
-                "command": "webpack-cli serve"
-              },
-              "metadata": {
-                "technologies": [
-                  "webpack"
-                ],
-                "description": "Starts Webpack dev server in production mode",
-                "help": {
-                  "command": "npx webpack-cli serve --help",
-                  "example": {
-                    "options": {
-                      "args": [
-                        "--client-progress",
-                        "--history-api-fallback "
-                      ]
-                    }
-                  }
-                }
-              },
-              "syncGenerators": [
-                "@nx/js:typescript-sync"
-              ],
-              "executor": "nx:run-commands",
-              "configurations": {},
-              "parallelism": true
-            },
-            "serve-static": {
-              "continuous": true,
-              "dependsOn": [
-                "build"
-              ],
-              "executor": "@nx/web:file-server",
-              "options": {
-                "buildTarget": "build",
-                "spa": true
-              },
-              "syncGenerators": [
-                "@nx/js:typescript-sync"
-              ],
-              "configurations": {},
-              "parallelism": true
-            },
-            "build-deps": {
-              "dependsOn": [
-                "^build"
-              ],
-              "configurations": {},
-              "options": {},
-              "parallelism": true,
-              "executor": "nx:noop"
-            },
-            "watch-deps": {
-              "continuous": true,
-              "dependsOn": [
-                "build-deps"
-              ],
-              "executor": "nx:run-commands",
-              "options": {
-                "command": "npx nx watch --projects @mantu/api --includeDependentProjects -- npx nx build-deps @mantu/api"
-              },
-              "configurations": {},
-              "parallelism": true
-            },
-            "lint": {
-              "cache": true,
-              "options": {
-                "cwd": "mantu/api",
-                "command": "eslint ."
-              },
-              "inputs": [
-                "default",
-                "^default",
-                "{workspaceRoot}/eslint.config.mjs",
-                "{workspaceRoot}/mantu/api/eslint.config.mjs",
-                "{workspaceRoot}/tools/eslint-rules/**/*",
-                {
-                  "externalDependencies": [
-                    "eslint"
-                  ]
-                }
-              ],
-              "outputs": [
-                "{options.outputFile}"
-              ],
-              "metadata": {
-                "technologies": [
-                  "eslint"
-                ],
-                "description": "Runs ESLint on project",
-                "help": {
-                  "command": "npx eslint --help",
-                  "example": {
-                    "options": {
-                      "max-warnings": 0
-                    }
-                  }
-                }
-              },
-              "executor": "nx:run-commands",
-              "configurations": {},
-              "parallelism": true
-            }
-          },
-          "projectType": "application",
-          "metadata": {},
-          "name": "@mantu/api",
-          "implicitDependencies": []
-        },
-        "@mantu/api-e2e": {
-          "root": "mantu/api-e2e",
-          "targets": {
-            "typecheck": {
-              "dependsOn": [
-                "^typecheck"
-              ],
-              "options": {
-                "cwd": "mantu/api-e2e",
-                "command": "tsc --build --emitDeclarationOnly"
-              },
-              "cache": true,
-              "inputs": [
-                "{projectRoot}/package.json",
-                "{workspaceRoot}/mantu/tsconfig.base.json",
-                "{projectRoot}/tsconfig.json",
-                "{projectRoot}/jest.config.ts",
-                "{projectRoot}/src/**/*.ts",
-                "^production"
-              ],
-              "outputs": [
-                "{projectRoot}/out-tsc/@mantu/api-e2e/**/*.d.ts",
-                "{projectRoot}/out-tsc/@mantu/api-e2e/**/*.d.ts.map",
-                "{projectRoot}/out-tsc/@mantu/api-e2e/tsconfig.tsbuildinfo"
-              ],
-              "syncGenerators": [
-                "@nx/js:typescript-sync"
-              ],
-              "metadata": {
-                "technologies": [
-                  "typescript"
-                ],
-                "description": "Runs type-checking for the project.",
-                "help": {
-                  "command": "npx tsc --build --help",
-                  "example": {
-                    "args": [
-                      "--force"
-                    ]
-                  }
-                }
-              },
-              "executor": "nx:run-commands",
-              "configurations": {},
-              "parallelism": true
-            },
-            "lint": {
-              "cache": true,
-              "options": {
-                "cwd": "mantu/api-e2e",
-                "command": "eslint ."
-              },
-              "inputs": [
-                "default",
-                "^default",
-                "{workspaceRoot}/eslint.config.mjs",
-                "{workspaceRoot}/mantu/api-e2e/eslint.config.mjs",
-                "{workspaceRoot}/tools/eslint-rules/**/*",
-                {
-                  "externalDependencies": [
-                    "eslint"
-                  ]
-                }
-              ],
-              "outputs": [
-                "{options.outputFile}"
-              ],
-              "metadata": {
-                "technologies": [
-                  "eslint"
-                ],
-                "description": "Runs ESLint on project",
-                "help": {
-                  "command": "npx eslint --help",
-                  "example": {
-                    "options": {
-                      "max-warnings": 0
-                    }
-                  }
-                }
-              },
-              "executor": "nx:run-commands",
-              "configurations": {},
-              "parallelism": true
-            }
-          },
-          "name": "@mantu/api-e2e",
-          "implicitDependencies": []
-        },
-        "shared": {
-          "root": "mantu/shared",
-          "targets": {
-            "typecheck": {
-              "dependsOn": [
-                "build",
-                "^typecheck"
-              ],
-              "options": {
-                "cwd": "mantu/shared",
-                "command": "tsc --build --emitDeclarationOnly"
-              },
-              "cache": true,
-              "inputs": [
-                "{projectRoot}/package.json",
-                "{workspaceRoot}/mantu/tsconfig.base.json",
-                "{projectRoot}/tsconfig.json",
-                "{projectRoot}/tsconfig.lib.json",
-                "{projectRoot}/tsconfig.spec.json",
-                "{projectRoot}/src/**/*.ts",
-                "{projectRoot}/jest.config.ts",
-                "{projectRoot}/jest.config.cts",
-                "{projectRoot}/src/**/*.test.ts",
-                "{projectRoot}/src/**/*.spec.ts",
-                "{projectRoot}/src/**/*.d.ts",
-                "^production"
-              ],
-              "outputs": [
-                "{projectRoot}/dist/**/*.d.ts",
-                "{projectRoot}/dist/**/*.d.ts.map",
-                "{projectRoot}/dist/tsconfig.lib.tsbuildinfo",
-                "{projectRoot}/out-tsc/jest/**/*.d.ts",
-                "{projectRoot}/out-tsc/jest/**/*.d.ts.map",
-                "{projectRoot}/out-tsc/jest/tsconfig.tsbuildinfo"
-              ],
-              "syncGenerators": [
-                "@nx/js:typescript-sync"
-              ],
-              "metadata": {
-                "technologies": [
-                  "typescript"
-                ],
-                "description": "Runs type-checking for the project.",
-                "help": {
-                  "command": "npx tsc --build --help",
-                  "example": {
-                    "args": [
-                      "--force"
-                    ]
-                  }
-                }
-              },
-              "executor": "nx:run-commands",
-              "configurations": {},
-              "parallelism": true
-            },
-            "build": {
-              "executor": "@nx/js:tsc",
-              "outputs": [
-                "{options.outputPath}"
-              ],
-              "options": {
-                "outputPath": "dist/mantu/shared",
-                "main": "mantu/shared/src/index.ts",
-                "tsConfig": "mantu/shared/tsconfig.lib.json",
-                "assets": [
-                  "mantu/shared/*.md"
-                ]
-              },
-              "configurations": {},
-              "parallelism": true
-            },
-            "build-deps": {
-              "dependsOn": [
-                "^build"
-              ],
-              "configurations": {},
-              "options": {},
-              "parallelism": true,
-              "executor": "nx:noop"
-            },
-            "watch-deps": {
-              "continuous": true,
-              "dependsOn": [
-                "build-deps"
-              ],
-              "executor": "nx:run-commands",
-              "options": {
-                "command": "npx nx watch --projects shared --includeDependentProjects -- npx nx build-deps shared"
-              },
-              "configurations": {},
-              "parallelism": true
-            },
-            "lint": {
-              "executor": "@nx/eslint:lint",
-              "outputs": [
-                "{options.outputFile}"
-              ],
-              "options": {},
-              "configurations": {},
-              "parallelism": true
-            },
-            "test": {
-              "executor": "@nx/jest:jest",
-              "outputs": [
-                "{workspaceRoot}/coverage/{projectRoot}"
-              ],
-              "options": {
-                "jestConfig": "mantu/shared/jest.config.ts"
-              },
-              "configurations": {},
-              "parallelism": true,
-              "dependsOn": [
-                "^build"
-              ]
-            },
-            "build:cjs": {
-              "executor": "@nx/js:tsc",
-              "outputs": [
-                "{options.outputPath}"
-              ],
-              "options": {
-                "outputPath": "dist/mantu/shared/cjs",
-                "main": "mantu/shared/src/index.ts",
-                "tsConfig": "mantu/shared/tsconfig.lib.json",
-                "assets": [
-                  "mantu/shared/*.md"
-                ]
-              },
-              "configurations": {},
-              "parallelism": true
-            },
-            "build:esm": {
-              "executor": "@nx/js:tsc",
-              "outputs": [
-                "{options.outputPath}"
-              ],
-              "options": {
-                "outputPath": "dist/mantu/shared/esm",
-                "main": "mantu/shared/src/index.ts",
-                "tsConfig": "mantu/shared/tsconfig.esm.json",
-                "assets": [
-                  "mantu/shared/*.md"
-                ]
-              },
-              "configurations": {},
-              "parallelism": true
-            },
-            "build:all": {
-              "executor": "nx:run-commands",
-              "outputs": [
-                "{workspaceRoot}/dist/mantu/shared"
-              ],
-              "options": {
-                "commands": [
-                  "nx run shared:build:cjs",
-                  "nx run shared:build:esm"
-                ],
-                "parallel": false
-              },
-              "configurations": {},
-              "parallelism": true
-            }
-          },
-          "name": "shared",
-          "tags": [
-            "npm:private"
-          ],
-          "metadata": {
-            "targetGroups": {},
-            "js": {
-              "packageName": "@mantu/shared",
-              "packageVersion": "0.0.1",
-              "packageExports": {
-                "./package.json": "./package.json",
-                ".": {
-                  "@mantu/source": "./src/index.ts",
-                  "types": "./dist/index.d.ts",
-                  "import": "./dist/index.js",
-                  "default": "./dist/index.js"
-                }
-              },
-              "packageMain": "./dist/index.js",
-              "isInPackageManagerWorkspaces": false
-            }
-          },
-          "$schema": "../../node_modules/nx/schemas/project-schema.json",
-          "sourceRoot": "mantu/shared/src",
-          "projectType": "library"
-        },
-        "@mantu/source": {
-          "root": "mantu",
-          "targets": {
-            "typecheck": {
-              "dependsOn": [
-                "^typecheck"
-              ],
-              "options": {
-                "cwd": "mantu",
-                "command": "tsc --build --emitDeclarationOnly"
-              },
-              "cache": true,
-              "inputs": [
-                "production",
-                {
-                  "dependentTasksOutputFiles": "**/*.d.ts"
-                }
-              ],
-              "outputs": [],
-              "syncGenerators": [
-                "@nx/js:typescript-sync"
-              ],
-              "metadata": {
-                "technologies": [
-                  "typescript"
-                ],
-                "description": "Runs type-checking for the project.",
-                "help": {
-                  "command": "npx tsc --build --help",
-                  "example": {
-                    "args": [
-                      "--force"
-                    ]
-                  }
-                }
-              },
-              "executor": "nx:run-commands",
-              "configurations": {},
-              "parallelism": true
-            },
-            "lint": {
-              "cache": true,
-              "options": {
-                "cwd": "mantu",
-                "command": "eslint ."
-              },
-              "inputs": [
-                "default",
-                "^default",
-                "{workspaceRoot}/eslint.config.mjs",
-                "{workspaceRoot}/mantu/eslint.config.mjs",
-                "{workspaceRoot}/tools/eslint-rules/**/*",
-                {
-                  "externalDependencies": [
-                    "eslint"
-                  ]
-                }
-              ],
-              "outputs": [
-                "{options.outputFile}"
-              ],
-              "metadata": {
-                "technologies": [
-                  "eslint"
-                ],
-                "description": "Runs ESLint on project",
-                "help": {
-                  "command": "npx eslint --help",
-                  "example": {
-                    "options": {
-                      "max-warnings": 0
-                    }
-                  }
-                }
-              },
-              "executor": "nx:run-commands",
-              "configurations": {},
-              "parallelism": true
-            }
-          },
-          "name": "@mantu/source",
-          "implicitDependencies": []
-        }
-      },
-      "name": "MultipleProjectsWithSameNameError"
-    }
-  ],
-  "computedAt": 1764672505564
+  "errors": [],
+  "computedAt": 1764673037572
 }
