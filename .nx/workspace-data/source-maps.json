@@ -1,0 +1,2056 @@
+{
+  "api": {
+    "root": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "projectType": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.cache": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.dependsOn": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.inputs": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.outputs": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.syncGenerators": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.executor": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.cwd": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.args": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.command": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.technologies": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.technologies.0": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.description": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.help": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.help.command": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.help.example": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.continuous": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.syncGenerators": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.executor": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options.cwd": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options.args": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options.command": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.technologies": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.technologies.0": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.description": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.help": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.help.command": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.help.example": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build-deps": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build-deps.dependsOn": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.continuous": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.executor": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.options": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.options.command": [
+      "api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.lint": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.cache": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.inputs": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.outputs": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.executor": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.cwd": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.command": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies.0": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.description": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.command": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.example": [
+      "api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.test": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.cache": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.inputs": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.outputs": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.executor": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.options.cwd": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.options.env": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.options.command": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.metadata.technologies": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.metadata.technologies.0": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.metadata.description": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.metadata.help": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.metadata.help.command": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "targets.test.metadata.help.example": [
+      "api/jest.config.cts",
+      "@nx/jest/plugin"
+    ],
+    "name": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.configurations": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.configurations.development": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.configurations.development.args": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.dependsOn": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.cache": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.executor": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.outputs": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.options": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune-lockfile.options.buildTarget": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.dependsOn": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.cache": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.outputs": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.executor": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.options": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.copy-workspace-modules.options.buildTarget": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune.dependsOn": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.prune.executor": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.continuous": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.executor": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.dependsOn": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.options": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.options.runBuildTargetDependencies": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.development": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.production": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options.passWithNoTests": [
+      "api/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "api-e2e": {
+    "root": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.lint": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.cache": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.inputs": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.outputs": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.executor": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.cwd": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.command": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies.0": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.description": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.command": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.example": [
+      "api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "name": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "implicitDependencies": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "implicitDependencies.@mantu/api": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.executor": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.outputs": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.options": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.dependsOn": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.options.jestConfig": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.e2e.options.passWithNoTests": [
+      "api-e2e/package.json",
+      "nx/core/package-json"
+    ]
+  },
+  "mantu/api": {
+    "root": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "mantu/api/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "projectType": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.options": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.cache": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.dependsOn": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.inputs": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.outputs": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.syncGenerators": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.executor": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.options.cwd": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.options.args": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.options.command": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.technologies": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.technologies.0": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.description": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.help": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.help.command": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build.metadata.help.example": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.continuous": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.options": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.syncGenerators": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.executor": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.options.cwd": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.options.args": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.options.command": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.technologies": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.technologies.0": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.description": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.help": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.help.command": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve.metadata.help.example": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.continuous": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.syncGenerators": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.executor": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options.cwd": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options.args": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.options.command": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.technologies": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.technologies.0": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.description": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.help": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.help.command": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.preview.metadata.help.example": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.continuous": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.dependsOn": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.executor": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.options": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.syncGenerators": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.options.buildTarget": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.serve-static.options.spa": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build-deps": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.build-deps.dependsOn": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.continuous": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.executor": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.options": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.watch-deps.options.command": [
+      "mantu/api/webpack.config.js",
+      "@nx/webpack/plugin"
+    ],
+    "targets.lint": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.cache": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.inputs": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.outputs": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.executor": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.cwd": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.command": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies.0": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.description": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.command": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.example": [
+      "mantu/api/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ]
+  },
+  "mantu/api-e2e": {
+    "root": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "mantu/api-e2e/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.lint": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.cache": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.inputs": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.outputs": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.executor": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.cwd": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.command": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies.0": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.description": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.command": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.example": [
+      "mantu/api-e2e/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ]
+  },
+  "mantu/shared": {
+    "root": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "mantu/shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps": [
+      "mantu/shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.continuous": [
+      "mantu/shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "mantu/shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.executor": [
+      "mantu/shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.options": [
+      "mantu/shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.options.command": [
+      "mantu/shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "name": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "mantu/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "mantu/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "mantu/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "mantu/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "mantu/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "mantu/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "mantu/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "mantu/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "mantu/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "$schema": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.main": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.tsConfig": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.assets": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.executor": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.outputs": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.options": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.options.outputPath": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.options.main": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.options.tsConfig": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.options.assets": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.executor": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.outputs": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.options": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.options.outputPath": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.options.main": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.options.tsConfig": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.options.assets": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all.executor": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all.outputs": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all.options": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all.options.commands": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all.options.parallel": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.outputs": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "mantu/shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "mantu": {
+    "root": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "mantu/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.lint": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.cache": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.inputs": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.outputs": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.executor": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.cwd": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.command": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies.0": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.description": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.command": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.example": [
+      "mantu/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ]
+  },
+  "shared": {
+    "root": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.dependsOn": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.cache": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.inputs": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.outputs": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.syncGenerators": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.executor": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.cwd": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.options.command": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.technologies.0": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.description": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "shared/tsconfig.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps": [
+      "shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.continuous": [
+      "shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.dependsOn": [
+      "shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.executor": [
+      "shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.options": [
+      "shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "targets.watch-deps.options.command": [
+      "shared/tsconfig.lib.json",
+      "@nx/js/typescript"
+    ],
+    "name": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "shared/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "shared/package.json",
+      "nx/core/package-json"
+    ],
+    "$schema": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.main": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.tsConfig": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.assets": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.executor": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.outputs": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.options": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.options.outputPath": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.options.main": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.options.tsConfig": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:cjs.options.assets": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.executor": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.outputs": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.options": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.options.outputPath": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.options.main": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.options.tsConfig": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:esm.options.assets": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all.executor": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all.outputs": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all.options": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all.options.commands": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build:all.options.parallel": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.outputs": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "shared/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  }
+}

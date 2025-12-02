@@ -1,0 +1,61 @@
+{
+  "name": "shared",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "mantu/shared/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/mantu/shared",
+        "main": "mantu/shared/src/index.ts",
+        "tsConfig": "mantu/shared/tsconfig.lib.json",
+        "assets": ["mantu/shared/*.md"]
+      }
+    },
+    "build:cjs": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/mantu/shared/cjs",
+        "main": "mantu/shared/src/index.ts",
+        "tsConfig": "mantu/shared/tsconfig.lib.json",
+        "assets": ["mantu/shared/*.md"]
+      }
+    },
+    "build:esm": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/mantu/shared/esm",
+        "main": "mantu/shared/src/index.ts",
+        "tsConfig": "mantu/shared/tsconfig.esm.json",
+        "assets": ["mantu/shared/*.md"]
+      }
+    },
+    "build:all": {
+      "executor": "nx:run-commands",
+      "outputs": ["dist/mantu/shared"],
+      "options": {
+        "commands": [
+          "nx run shared:build:cjs",
+          "nx run shared:build:esm"
+        ],
+        "parallel": false
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "mantu/shared/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
